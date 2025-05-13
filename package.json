@@ -19,6 +19,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.17",
     "cross-env": "^7.0.3",
+    "electron": "^36.2.0",
     "electron-builder": "^26.0.12",
     "electron-reload": "^2.0.0-alpha.1",
     "postcss": "^8.4.35",
