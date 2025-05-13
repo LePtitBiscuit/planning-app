@@ -1,0 +1,180 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@font-face {
+  font-family: "Lexend";
+  src: url("../font/Lexend-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+}
+
+@layer components {
+  /* Classes de positionnement */
+  .timeslot-label {
+    @apply absolute z-[100] top-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-90;
+  }
+
+  .first-timeslot-label {
+    @apply absolute top-[200px] transform -translate-x-1/2 -translate-y-1/2 -rotate-90;
+  }
+
+  .first-timeslot-label-2 {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-[68%] -translate-y-1/2 -rotate-90;
+  }
+
+  /* Classes de bordure */
+  .border-top-none {
+    @apply border-t-0;
+  }
+
+  .border-r-gray-200 {
+    @apply !border-r !border-gray-200;
+  }
+
+  .border-bottom-none {
+    @apply border-b-0;
+  }
+
+  .border-b-gray-200 {
+    @apply !border-b !border-gray-200;
+  }
+
+  .border-b-gray-600 {
+    @apply !border-b !border-gray-600;
+  }
+
+  .border-b-black-200 {
+    @apply !border-b !border-black;
+  }
+
+  /* Classes de cellule */
+  .cell-border {
+    @apply !border !border-gray-200;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Classes de titre */
+  .column-title {
+    @apply text-center leading-[50px];
+  }
+
+  /* Classes de visibilité */
+  .visibility-hidden {
+    @apply hidden;
+  }
+
+  .print-planning {
+    @apply hidden;
+  }
+
+  #logos-planning-container {
+    @apply hidden;
+  }
+
+  /* Styles d'impression */
+  @media print {
+    body {
+      @apply !h-screen !bg-white;
+    }
+
+    body * {
+      @apply invisible;
+    }
+
+    #sidebar {
+      @apply hidden;
+    }
+
+    #planning-context-menu-btn,
+    #planning-context-menu-popup *,
+    #planning-context-menu-popup,
+    #model-context-menu-popup *,
+    #model-context-menu-popup {
+      @apply !invisible;
+    }
+
+    #my-plannings-container,
+    #my-models-container {
+      @apply hidden;
+    }
+
+    #planning-context-menu-btn,
+    #model-context-menu-btn {
+      @apply hidden;
+    }
+
+    #planning-container,
+    #planning-container * {
+      @apply visible;
+    }
+
+    .print-planning {
+      @apply !block !z-[1000] !visible;
+    }
+
+    #planning-container {
+      @apply absolute left-0 top-0 w-screen;
+    }
+
+    #logos-planning-container {
+      @apply !flex absolute right-0 top-0 w-[40%];
+    }
+
+    #planning {
+      @apply !shadow-none !overflow-hidden;
+      @apply !max-h-max;
+    }
+
+    #tmp-row {
+      @apply hidden;
+    }
+
+    .first-timeslot-label {
+      @apply font-medium absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-90;
+    }
+
+    .column-title {
+      @apply !text-black !text-[0.8rem] !font-bold;
+    }
+
+    #planning-title-container {
+      @apply pb-0;
+    }
+
+    #planning-container h3 {
+      @apply pt-8 pb-4;
+    }
+
+    tbody tr td {
+      @apply !h-[20px] !text-[0.7rem] !leading-none;
+    }
+
+    td,
+    th {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      @apply !text-[0.7rem];
+    }
+
+    th:not(:nth-last-child(1)):not(:nth-last-child(2)) {
+      @apply !w-[100px] !max-w-[100px];
+    }
+
+    th:last-child {
+      @apply !w-auto !flex-grow;
+    }
+
+    td {
+      @apply !border-collapse !border;
+    }
+
+    table {
+      @apply !table-fixed !border-collapse !w-screen;
+    }
+  }
+}

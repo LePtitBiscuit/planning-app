@@ -1,0 +1,75 @@
+<div id="my-plannings-container" class="max-h-screen w-full h-full p-8 relative">
+  <h1 id="main-title" class="absolute left-[2rem] top-[1rem] text-2xl font-bold text-gray-900 z-10">Plannings</h1>
+  <!-- Header (bouton, recherche, vues) -->
+  <div class="flex flex-col gap-4 mb-8 mt-16">
+    <div class="flex flex-row items-center justify-between w-full">
+      <div class="w-72"></div>
+      <button
+        id="btn-nouveau-planning"
+        class="bg-blue-600 text-white font-semibold rounded-lg px-6 py-2 block hover:bg-blue-700 transition"
+      >
+        Nouveau planning
+      </button>
+      <div class="relative flex items-center w-72">
+        <span class="absolute left-3 text-gray-400">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-2-2" />
+          </svg>
+        </span>
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Rechercher un planning"
+          class="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700"
+        />
+      </div>
+    </div>
+    <div class="flex justify-end mt-2">
+      <div class="flex items-center gap-2">
+        <button id="btn-vue-liste" class="p-2 rounded hover:bg-blue-200 transition" title="Vue liste">
+          <img
+            src="../public/images/list-view.svg"
+            width="22"
+            height="22"
+            alt="Vue liste"
+            class="[&>path]:stroke-gray-600"
+          />
+        </button>
+        <button id="btn-vue-grille" class="p-2 rounded hover:bg-blue-200 transition" title="Vue grille">
+          <img
+            src="../public/images/grid-view.svg"
+            width="22"
+            height="22"
+            alt="Vue grille"
+            class="[&>path]:stroke-red-600"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Liste des plannings (tableau) -->
+  <div
+    id="liste-plannings"
+    class="rounded-lg mt-4 relative overflow-y-auto overflow-x-hidden max-h-[calc(100vh-17rem)] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-blue-600 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:mt-[48px]"
+  >
+    <table class="min-w-full text-left">
+      <thead class="sticky top-0 bg-gray-50 z-10">
+        <tr class="border-b">
+          <th class="px-6 py-3 font-semibold text-left">Nom</th>
+          <th class="px-6 py-3 font-semibold text-center">Date de création</th>
+          <th class="px-6 py-3 font-semibold text-center">Dernière modification</th>
+          <th class="w-[200px] px-6 py-3 font-semibold text-center"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Exemple de ligne -->
+      </tbody>
+    </table>
+  </div>
+  <div
+    id="grille-plannings"
+    class="flex flex-wrap gap-[40px] justify-start w-full overflow-y-auto max-h-[calc(100vh-250px)] px-4 py-2 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-blue-600 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:hover:bg-blue-500"
+  ></div>
+</div>

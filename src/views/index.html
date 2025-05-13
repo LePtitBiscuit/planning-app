@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Générateur de Planning</title>
+    <link href="../public/css/output.css" rel="stylesheet" />
+    <script type="module">
+      import { loadPage } from "../public/js/main.js";
+      // Make loadPage available globally
+      window.loadPage = loadPage;
+    </script>
+  </head>
+  <body class="bg-gray-50 relative overflow-hidden">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <aside id="sidebar" class="bg-blue-600 flex flex-col items-center min-w-[210px]">
+        <!-- Logo image -->
+        <div id="sidebar-logo-container" class="mb-24 mt-2">
+          <img id="sidebar-logo" src="../public/images/logo.png" alt="Logo" class="w-16 h-16 object-contain mx-auto" />
+        </div>
+        <!-- Liens -->
+        <nav id="sidebar-nav" class="flex flex-col gap-8 w-full">
+          <a
+            id="nav-mes-plannings"
+            href="#"
+            class="pl-8 w-full h-[50px] text-white text-lg font-medium decoration-white active bg-blue-800 flex items-center hover:bg-blue-700 transition-colors duration-200"
+            onclick="loadPage('my-plannings.html')"
+            >Plannings</a
+          >
+          <a
+            id="nav-creer-planning"
+            href="#"
+            class="pl-8 w-full h-[50px] text-white text-lg font-medium decoration-white flex items-center hover:bg-blue-700 transition-colors duration-200"
+            onclick="loadPage('create-planning.html')"
+            >Créer un planning</a
+          >
+          <a
+            id="nav-mes-modeles"
+            href="#"
+            class="pl-8 w-full h-[50px] text-white text-lg font-medium decoration-white flex items-center hover:bg-blue-700 transition-colors duration-200"
+            onclick="loadPage('my-models.html')"
+            >Modèles</a
+          >
+
+          <a
+            id="nav-creer-model"
+            href="#"
+            class="pl-8 w-full h-[50px] text-white text-lg font-medium decoration-white flex items-center hover:bg-blue-700 transition-colors duration-200"
+            onclick="loadPage('create-model.html')"
+            >Créer un modèle</a
+          >
+        </nav>
+      </aside>
+      <!-- Contenu principal -->
+      <main id="main-content" class="flex-1"></main>
+    </div>
+    <!-- <footer class="py-3 text-center text-gray-600 border-gray-200 shadow-md absolute bottom-0 w-full">
+      <div class="container mx-auto">
+        <p class="text-xs mb-0">
+          <span class="font-medium">Application créer et développer par</span>
+          <a href="mailto:andy.gustave@etu-univ.antilles.fr" class="text-blue-600 hover:underline font-semibold"
+            >Andy Gustave</a
+          >
+        </p>
+        <span class="text-xs">© 2025 - Tous droits réservés</span>
+      </div>
+    </footer> -->
+  </body>
+</html>
