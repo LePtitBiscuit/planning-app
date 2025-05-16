@@ -188,16 +188,6 @@ export class SelectLogosPopup {
       removePopup();
     });
 
-    printButton.addEventListener("click", () => {
-      if (this.exportType === "pdf") {
-        this.planning.exportPDF(this.selectedLogos);
-      } else {
-        this.planning.print(this.selectedLogos);
-      }
-      this.popup.remove();
-      removePopup();
-    });
-
     buttonContainer.appendChild(cancelButton);
     buttonContainer.appendChild(printButton);
 
