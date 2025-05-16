@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*"
+
 permissions:
   contents: write
 
@@ -32,3 +33,13 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           release: true
+
+      - name: Upload release assets
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            dist/*.dmg
+            dist/*.exe
+            dist/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
