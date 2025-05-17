@@ -1,6 +1,6 @@
 {
   "name": "planning-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Application de génération de planning",
   "main": "main.js",
   "scripts": {

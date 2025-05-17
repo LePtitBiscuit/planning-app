@@ -88,7 +88,7 @@ export class ModelContextMenu {
         <div class="flex flex-col gap-2 mt-2">
           <button id="save-planning" class="flex items-center gap-2 hover:bg-gray-100 rounded px-2 py-1">
             <img src="../public/images/save.svg" alt="Enregistrer" class="w-5 h-5" />
-            Enregistrer le modele
+            Sauvegarder
           </button>
           <button id="print-planning" class="flex items-center gap-2 hover:bg-gray-100 rounded px-2 py-1">
             <img src="../public/images/print.svg" alt="Imprimer" class="w-5 h-5" />
@@ -96,7 +96,7 @@ export class ModelContextMenu {
           </button>
           <button id="pdf-planning" class="flex items-center gap-2 hover:bg-gray-100 rounded px-2 py-1">
             <img src="../public/images/pdf.svg" alt="PDF" class="w-5 h-5" />
-            Sauvegarder au format PDF
+            Enregistrer au format PDF
           </button>
         </div>
       </div>

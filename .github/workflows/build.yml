@@ -4,7 +4,6 @@ on:
   push:
     tags:
       - "v*"
-
 permissions:
   contents: write
 
@@ -32,7 +31,4 @@ jobs:
         uses: samuelmeuli/action-electron-builder@v1
         with:
           github_token: ${{ secrets.github_token }}
-          release: false # Empêche l'auto-release incomplète
-
-      - name: Upload release assets
-        uses: softprops/action-gh-release@v1
+          release: true
